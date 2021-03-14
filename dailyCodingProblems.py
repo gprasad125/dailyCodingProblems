@@ -14,7 +14,8 @@ def equal(lst, k):
         return False
 
 #2. (3-13-2021)
-# Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i (NO DIVISION ALLOWED!)
+# Given an array of integers,
+# return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i (NO DIVISION ALLOWED!)
 def multiplyList(lst):
 
     if len(lst) == 0:
@@ -33,3 +34,19 @@ def multiplyList(lst):
     answer = [int(totalProduct * (term ** -1)) for term in lst]
 
     return answer
+
+#3. (3-14-2021)
+# Given an input string s, reverse the order of the words. (Remove extra spaces!)
+def reverseString(input):
+
+    if type(input) != str:
+        return None
+
+    if len(input) == 1:
+        return input
+
+    allWords = input.split()
+    allWords.reverse()
+    allWords = " ".join(allWords)
+
+    return allWords
