@@ -69,3 +69,23 @@ def findMissing(arr):
     for val in arr:
         if (val + 1) not in arr:
             return val + 1
+
+#5. (3-16-2021)
+# cons(a, b) constructs a pair, and car(pair) and cdr(pair) returns the first and last element of that pair.
+# For example, car(cons(3, 4)) returns 3, and cdr(cons(3, 4)) returns 4.
+# Given an implementation of cons, find cdr and car
+def cons(a, b):
+    def pair(f):
+        return f(a, b)
+    return pair
+
+    #Create a function that will be passed as "f" in the cons function
+def car(input):
+    def findFirst(a, b):
+        return a
+    return input(findFirst)
+
+def cdr(input):
+    def findLast(a, b):
+        return b
+    return input(findLast)
