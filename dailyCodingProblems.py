@@ -50,3 +50,22 @@ def reverseString(input):
     allWords = " ".join(allWords)
 
     return allWords
+
+#4. (3-15-2021)
+# Given an array of integers, find the first missing positive integer in linear time and constant space.
+# In other words, find the lowest positive integer that does not exist in the array.
+# The array can contain duplicates and negative numbers as well.
+def findMissing(arr):
+
+    if len(arr) == 0:
+        return None
+
+    arr = [val for val in arr if val >= 0]
+    arr.sort()
+
+    if len(arr) == 0:
+        return 0
+
+    for val in arr:
+        if (val + 1) not in arr:
+            return val + 1
