@@ -15,7 +15,8 @@ def equal(lst, k):
 
 #2. (3-13-2021)
 # Given an array of integers,
-# return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i (NO DIVISION ALLOWED!)
+# return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i 
+# (NO DIVISION ALLOWED!)
 def multiplyList(lst):
 
     if len(lst) == 0:
