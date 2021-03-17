@@ -15,7 +15,7 @@ def equal(lst, k):
 
 #2. (3-13-2021)
 # Given an array of integers,
-# return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i 
+# return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i
 # (NO DIVISION ALLOWED!)
 def multiplyList(lst):
 
@@ -90,3 +90,25 @@ def cdr(input):
     def findLast(a, b):
         return b
     return input(findLast)
+
+#6. (3-17-2021)
+# An XOR linked list is a more memory efficient doubly linked list.
+# Instead of each node holding next and prev fields, it holds a field named both, which is an XOR of the next node and the previous node.
+# Implement an XOR linked list; it has an add(element) which adds the element to the end, and a get(index) which returns the node at index.
+class Node:
+    def __init__(self, element):
+        self.element = element
+        self.both = None
+
+class XORList:
+    def __init__(self):
+        self.head = None
+
+    #def calculateXOR(self, a, b):
+    #    self.xor = a
+
+    def add(element):
+        toAdd = Node(element)
+        toAdd. = toAdd.calculateXOR(element, b)
+
+# HMM this is hard
