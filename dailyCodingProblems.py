@@ -109,6 +109,34 @@ class XORList:
 
     def add(element):
         toAdd = Node(element)
-        toAdd. = toAdd.calculateXOR(element, b)
+        #toAdd. = toAdd.calculateXOR(element, b)
 
 # HMM this is hard
+
+#7. (3-18-2021)
+# Given the mapping a = 1, b = 2, ... z = 26, and an encoded message, count the number of ways it can be decoded.
+# For example, the message '111' would give 3, since it could be decoded as 'aaa', 'ka', and 'ak'.
+
+mapping = {}
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+for i in range(len(alphabet)):
+    mapping[alphabet[i]] = i + 1
+
+def decode(input):
+
+    n = len(input)
+    count = 1
+
+    for i in range(n):
+
+        if (i+1) < n:
+            left = input[i]
+            right = input[i+1]
+
+            if (left != "0") and (int(left + right) < 26):
+                count += 1
+
+    return count
+
+print(decode("1223"))
