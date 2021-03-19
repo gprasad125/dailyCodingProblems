@@ -126,17 +126,14 @@ for i in range(len(alphabet)):
 def decode(input):
 
     n = len(input)
-    count = 1
 
-    for i in range(n):
+    if n <= 1:
+        return 1
 
-        if (i+1) < n:
-            left = input[i]
-            right = input[i+1]
+    currentCount = 0
+    if input[n-1] > "0":
+        currentCount = decode(input[0:n-1])
+    if input[n-2] + input[n-1] < "26":
+        currentCount += decode(input[0:n-2])
 
-            if (left != "0") and (int(left + right) < 26):
-                count += 1
-
-    return count
-
-print(decode("1223"))
+    return currentCount
