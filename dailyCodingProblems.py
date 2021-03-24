@@ -137,3 +137,18 @@ def decode(input):
         currentCount += decode(input[0:n-2])
 
     return currentCount
+
+#8. (3-23-2021)
+# Implement an autocomplete system.
+# That is, given a query string s and a set of all possible query strings, return all strings in the set that have s as a prefix.
+def autocomplete(query, possible):
+
+    prefixLength = len(query)
+    results = []
+
+    for string in possible:
+
+        if query == string[0:prefixLength]:
+            results.append(string)
+
+    return results
